@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Text,
   StyleSheet,
@@ -6,10 +6,10 @@ import {
   View,
   Image,
   ImageBackground,
-} from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import LoginForm from '../../sections/components/loginForm'
-import Logo from '../../sections/components/logo'
+} from "react-native";
+import {SafeAreaView} from "react-native-safe-area-context";
+import LoginForm from "../../sections/components/loginForm";
+import Logo from "../../sections/components/logo";
 
 const Login = () => {
   return (
@@ -18,22 +18,22 @@ const Login = () => {
       source={require('../../../assets/loginBackground.jpg')}
       style={{width: '100%', height: '100%'}}
       > */}
-        
-        <LoginForm/>
-        <Logo/>
+
+      <Logo />
+      <LoginForm />
       {/* </ImageBackground> */}
     </SafeAreaView>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#32a28e',
-  }
-})
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#32a28e",
+  },
+});
 
-export default Login
+export default Login;
