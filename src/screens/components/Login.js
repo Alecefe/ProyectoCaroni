@@ -2,26 +2,23 @@ import React from "react";
 import {
   Text,
   StyleSheet,
-  Button,
-  View,
-  Image,
   ImageBackground,
+  View
 } from "react-native";
 import {SafeAreaView} from "react-native-safe-area-context";
 import LoginForm from "../../sections/components/loginForm";
+import ColoredBackground from '../containers/ColoredBackground'
 import Logo from "../../sections/components/logo";
 
 const Login = () => {
   return (
     <SafeAreaView style={styles.container}>
-      {/* <ImageBackground
-      source={require('../../../assets/loginBackground.jpg')}
-      style={{width: '100%', height: '100%'}}
-      > */}
-
-      <Logo />
-      <LoginForm />
-      {/* </ImageBackground> */}
+      <ColoredBackground>
+        <View style={styles.appcontainer}>
+          <Logo/>
+          <LoginForm/>
+        </View>
+      </ColoredBackground>  
     </SafeAreaView>
   );
 };
@@ -29,11 +26,16 @@ const Login = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 10,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#32a28e",
+    flexDirection:'column'
   },
+  text: {
+    color: "white",
+  },
+  appcontainer: {
+    flex:1,
+    flexDirection:'column',
+    alignItems:'center',
+  }
 });
 
 export default Login;

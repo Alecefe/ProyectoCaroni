@@ -9,9 +9,9 @@ const Logo = () =>
 
 const styles = StyleSheet.create({
   logo: {
-    maxWidth: 200, 
-    maxHeight:160,
-    marginBottom: 50
+    maxWidth: 300, 
+    maxHeight:250,
+    marginVertical: 30
   }
 })
 

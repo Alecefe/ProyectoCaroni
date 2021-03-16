@@ -8,7 +8,6 @@ import {
   Alert 
 } from "react-native";
 import { useForm, Controller } from "react-hook-form";
-import { color } from "react-native-reanimated";
 
 const loginForm = () => {
   const { control, handleSubmit, errors } = useForm();
@@ -47,6 +46,7 @@ const loginForm = () => {
         name="lastName"
         defaultValue=""
       />
+      <TextInput defaultValue='prueba'/>
     </View>
       <TouchableOpacity title="Ingresar" style={styles.button} onPress={handleSubmit(onSubmit)}>
         <Text style={{color:'#ffffff', fontWeight:'bold'}}>Ingresar</Text>
@@ -57,9 +57,10 @@ const loginForm = () => {
 
 const styles = StyleSheet.create({
   container:{
-    minWidth: 300,
+    minWidth: '60%',
+    minHeight: '20%',
     backgroundColor: '#ffffff',
-    opacity: 0.65,
+    opacity: 0.7,
     borderRadius:20,
     paddingHorizontal: 20,
     paddingVertical:2
@@ -74,7 +75,7 @@ const styles = StyleSheet.create({
     paddingVertical:7
   },
   button:{
-    minWidth: 300,
+    minWidth: '60%',
     borderWidth: 3,
     borderRadius:20,
     borderColor:'#ffffff',
