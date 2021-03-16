@@ -25,8 +25,9 @@ const styles = StyleSheet.create({
     opacity: 0.85,
   },
   image: {
-    flex: 1,
     resizeMode: "cover",
+    height: '100%',
+    width: '100%',
     justifyContent: "center",
   },
 });

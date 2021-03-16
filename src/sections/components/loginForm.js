@@ -27,11 +27,11 @@ const loginForm = () => {
             placeholder='Usuario'
           />
         )}
-        name="firstName"
+        name="user"
         rules={{ required: true }}
         defaultValue=""
       />
-      {errors.firstName && <Text>This is required.</Text>}
+      {errors.user && <Text>This is required.</Text>}
       <Controller
         control={control}
         render={({ onChange, onBlur, value }) => (
@@ -43,10 +43,9 @@ const loginForm = () => {
             placeholder='Contraseña'
           />
         )}
-        name="lastName"
+        name="pass"
         defaultValue=""
       />
-      <TextInput defaultValue='prueba'/>
     </View>
       <TouchableOpacity title="Ingresar" style={styles.button} onPress={handleSubmit(onSubmit)}>
         <Text style={{color:'#ffffff', fontWeight:'bold'}}>Ingresar</Text>
@@ -76,12 +75,12 @@ const styles = StyleSheet.create({
   },
   button:{
     minWidth: '60%',
+    minHeight: '7%',
     borderWidth: 3,
     borderRadius:20,
     borderColor:'#ffffff',
     alignItems: "center",
     margin: 20,
-    padding: 10
   }
 })
 
