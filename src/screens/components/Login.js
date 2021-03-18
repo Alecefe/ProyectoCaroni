@@ -3,7 +3,8 @@ import {
   Text,
   StyleSheet,
   ImageBackground,
-  View
+  View,
+  KeyboardAvoidingView
 } from "react-native";
 import {SafeAreaView} from "react-native-safe-area-context";
 import LoginForm from "../../sections/components/loginForm";
@@ -12,14 +13,19 @@ import Logo from "../../sections/components/logo";
 
 const Login = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <ColoredBackground>
-        <View style={styles.appcontainer}>
-          <Logo/>
-          <LoginForm/>
-        </View>
-      </ColoredBackground>  
-    </SafeAreaView>
+    <KeyboardAvoidingView
+      behavior={Platform.OS === "ios" ? "padding" : "height"}
+      style={{flex:1}}
+    >
+      <SafeAreaView style={styles.container}>
+        <ColoredBackground>
+          <View style={styles.inner}>
+            <Logo/>
+            <LoginForm/>
+          </View>
+        </ColoredBackground>  
+      </SafeAreaView>
+    </KeyboardAvoidingView>
   );
 };
 
@@ -31,10 +37,12 @@ const styles = StyleSheet.create({
   text: {
     color: "white",
   },
-  appcontainer: {
+  inner: {
     flex:1,
     flexDirection:'column',
     alignItems:'center',
+    justifyContent:'flex-end',
+    paddingBottom:'25%'
   }
 });
 
